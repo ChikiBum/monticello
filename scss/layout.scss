@@ -1,0 +1,67 @@
+//variables
+$container: 1170px;
+$gap: 15px;
+$col: 12;
+$colWidth: 100% / $col;
+
+
+$primaryColor: #fff;
+$secondaryColor: #2c4058;
+
+$btnBorderColor: $primaryColor;
+
+$red: #f34b4b;
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+max-width: $container;
+width: 100%;
+padding:  0 $gap;
+margin: 0 auto;
+}
+
+.ba-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$gap;
+    margin-right: -$gap;
+}
+
+.ba-row + .ba-row  {  /*делаем отспут сверху для первой строчки, после первой строчки. У первой нам не нужен отступ сверху  */
+    margin-top: 1rem;
+}
+
+[class^='ba-col-']{ 
+    padding: $gap $gap;
+    width: 100%;
+}
+
+
+@for $i from 1 through $col {
+        .ba-col-#{$i}{
+        width: $colWidth * $i;
+    }
+  }
+
+
+  //mixin
+  @mixin buttonHover {
+      background-color: pink;
+        border-color: darken($btnBorderColor, 10%);
+  }
+
+/* common */
+
+.visually-hidden {
+    position: absolute;
+    left: -9999999px;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
