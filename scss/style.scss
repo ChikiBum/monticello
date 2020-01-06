@@ -36,7 +36,7 @@ a {
 }
 
 .ba-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
@@ -118,6 +118,36 @@ a {
   &__wrapper {
     max-height: 123px;
     color: #fff;
+  }
+
+  &-slider{
+    .slick-list {
+      margin: 0;
+    }
+
+    .slick-dots li button:before {
+      font-family: 'slick';
+      font-size: 16px;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      content: '•';
+      text-align: center;
+      opacity: .25;
+      color: white;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .slick-dots {
+      -webkit-transform: translate(-50%, 0) rotate(90deg);
+      -ms-transform: translate(-50%, 0) rotate(90deg);
+      transform: translate(-50%, -2000%) rotate(90deg);
+      left: 89.5%;
+  }
   }
 
   &__title {
@@ -320,7 +350,7 @@ a {
 
   &__col-wrapper {
     height: 32.1875rem;
-    max-height: 50vh;
+    // max-height: 50vh;
     background-color: #fff;
     margin: 0;
   }
@@ -338,13 +368,13 @@ a {
     margin: 0;
   }
 
-  &__h3-inactive {
-    font-family: Myriad, sans-serif;
-    font-weight: normal;
-    font-size: 1.125rem;
-    font-size: 1.375rem;
-    color: black;
-  }
+  // &__h3-inactive {
+  //   font-family: Myriad, sans-serif;
+  //   font-weight: normal;
+  //   font-size: 1.125rem;
+  //   font-size: 1.375rem;
+  //   color: black;
+  // }
 
   &__descr {
     font-family: "Open Sans", sans-serif;
@@ -352,8 +382,9 @@ a {
     background-color: #fff;
     color: black;
     margin: 0;
-    padding-top: 1rem;
-    padding-left: 1.25rem;
+    // padding-top: 1rem;
+    // padding-left: 1.25rem;
+    padding: 1rem;
     line-height: 2rem;
   }
 
@@ -364,7 +395,7 @@ a {
     background-color: #fff;
     color: black;
     padding: 2.44rem 1.875rem;
-    padding-left: 1.25rem;
+    // padding-left: 1.25rem;
 
     &-img {
       height: 61px;
@@ -379,7 +410,8 @@ a {
         font-family: Gotham, serif;
         font-weight: normal;
         color: black;
-        font-size: 1.125rem;
+        // font-size: 1.125rem;
+        font-size: .825rem;
         text-transform: uppercase;
         margin-bottom: 1rem;
       }
