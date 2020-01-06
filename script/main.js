@@ -48,11 +48,26 @@ $(document).ready(function () {
 				$(".ba-menu__link").css({
 				'color': 'black'
 			});
+			$(".ba-menu__fab").css({
+				'color': 'black'
+			});
+		
+			$(".ba-logo").css({
+				'filter': 'invert(1)'
+			});
+			
 		}
 		else 
 		{
 			$(".ba-menu__link").css({
 			'color': 'white'
+		});
+		$(".ba-menu__fab").css({
+			'color': 'white'
+		});
+	
+		$(".ba-logo").css({
+			'filter': 'invert(0)'
 		});
 		};
 	});

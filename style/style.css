@@ -115,13 +115,30 @@ a {
 
 .ba-menu {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  list-style-type: circle; }
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
   .ba-menu__item {
+    display: flex;
+    align-items: center;
     position: relative;
     color: white; }
-    .ba-menu__item-active {
-      list-style-type: disc; }
+    .ba-menu__item:hover::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid #ffff;
+      background-color: #ffff; }
+    .ba-menu__item:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid #ffff;
+      margin-right: 10px; }
   .ba-menu__item + .ba-menu__item {
     margin-left: 65px; }
   .ba-menu__link {
@@ -430,7 +447,7 @@ a {
   .ba-contact__absolute {
     position: absolute;
     top: -17.1875rem;
-    left: 31%;
+    left: 29%;
     width: 48.125rem;
     height: 28.125rem;
     padding: 5% 0;
